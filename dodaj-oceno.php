@@ -1,5 +1,12 @@
  <?php include 'includes/header.php'; ?>
-
+<?php 
+	if (isset($_GET['dodana'])) {
+		echo '
+		<div class="alert alert-success uspesno-dodana animated">Ocena uspešno dodana!</div>
+		';
+	} else {
+	}
+ ?>
 
 			<div class="page-header">
 			  <h1>Dodaj <small>oceno</small></h1>

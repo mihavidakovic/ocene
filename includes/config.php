@@ -10,6 +10,8 @@ if (isset($_GET['id'])) {
 	while ($ocena = mysqli_fetch_assoc($sql)) {
 		$imepredmeta = $ocena['predmet'];
 	}
+} else {
+		$imepredmeta = "";
 }
 
 $imestrani = "Ocene v2";
