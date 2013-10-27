@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $imestrani; ?></title>
+	<meta charset='utf-8'>
+	<title><?php echo $imepredmeta; ?> | <?php echo $imestrani; ?></title>
 	<link rel="stylesheet/less" href="./css/master.less">
 	<script src="./js/less.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
