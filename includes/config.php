@@ -4,6 +4,8 @@ $con = mysqli_connect("localhost", "root", "", "ocene2") or die(mysqli_error());
 
 // GLAVNE NASTAVITVE
 
+$urlStrani = "http://localhost/ocene2";
+
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 	$sql = mysqli_query($con, "SELECT * FROM ocene WHERE predmet='" . $_GET['id'] . "' LIMIT 1");
@@ -27,5 +29,12 @@ $predmet9 = "oos";
 $predmet10 = "fiz";
 $predmet11 = "sap";
 $predmet12 = "npap";
+
+
+// GESLA
+
+
+
+
 
  ?>

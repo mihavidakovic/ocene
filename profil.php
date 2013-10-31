@@ -18,7 +18,7 @@
     while ($uporabnik = mysqli_fetch_assoc($result)) {
       echo '<li clas="col-lg-12">';
       echo '<div class="col-lg-2 col-md-1 col-sm-1 col-xs-1"><img src="' . $uporabnik['slika'] . '"></div>';
-      echo '<div class="col-lg-10 col-md-11 col-sm-11 col-xs-11"><a href="profil.php?id=' . $uporabnik['id'] . '">' . $uporabnik['ime_priimek'] . ', ' . $uporabnik['razred'] . '</a></div>';
+      echo '<div class="col-lg-10 col-md-11 col-sm-11 col-xs-11"><a href="' .  $urlStrani . '/profil/' . $uporabnik['id'] . '">' . $uporabnik['ime_priimek'] . ', ' . $uporabnik['razred'] . '</a></div>';
       echo '</li>';
     }
 
@@ -44,7 +44,7 @@
                         <div class="no pull-right">
                           <h3 class="text-muted" style="margin: -5px 0 0 0">#' . $uporabnik['id'] .'</h3>
                         </div>
-                        <div class="col-lg-3 no-padding"><img width="100%" src="' . $uporabnik['slika'] . '"></div>
+                        <div class="col-lg-3 no-padding"><a href="' . $uporabnik['slika'] . '" data-lightbox="image-1" title="' . $uporabnik['ime_priimek'] . '"><img width="100%" src="' . $uporabnik['slika'] . '"></a></div>
                         <div class="col-lg-9" style="margin: -20px 0 0 0;">
                             <p><b>Ime</b>: &nbsp;' . $uporabnik['ime_priimek'] . '</p>
                             <p><b>Spol</b>: &nbsp;' . $uporabnik['spol'] . '</p>

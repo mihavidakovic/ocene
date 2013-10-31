@@ -1,10 +1,4 @@
 <?php include 'includes/header.php'; ?>
-<?php 
-
-
- ?>
-
-
 		<?php 
 
 		$result = mysqli_query($con, "SELECT * FROM uporabniki");
@@ -15,7 +9,7 @@
 			echo '<div class="col-lg-1 slika">';
 			echo '<img class="pull-left" src="' . $uporabnik['slika'] . '">';
 			echo '</div>';
-			echo '<div class="col-lg-11 col-md-11 ime"><h2><a href="profil.php?id=' . $uporabnik['id'] . '">' . $uporabnik['ime_priimek'] . ', ' . $uporabnik['razred'] .'</a></h2></div>';
+			echo '<div class="col-lg-11 col-md-11 ime"><h2><a href="' .  $urlStrani . '/profil/' . $uporabnik['id'] . '">' . $uporabnik['ime_priimek'] . ', ' . $uporabnik['razred'] .'</a></h2></div>';
 			echo '</div>';
 			echo '
 				<table class="table table-bordered table-hover">
@@ -32,7 +26,7 @@
 
 			
 				echo '<tr>
-			            <td class="predmet">' . $imepredmeta. '</td>';
+			            <td class="predmet"><a href="predmet.php?ime=' . $imepredmeta . '">' . $imepredmeta. '</a></td>';
 			    echo '<td>';
  $ocene = mysqli_query($con, "SELECT * FROM ocene WHERE predmet='". $imepredmeta ."' AND uporabnik_id='". $uporabnik['id'] . "'");
 				while ($ocena = mysqli_fetch_assoc($ocene)) {

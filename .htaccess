@@ -1,3 +1,5 @@
-Options +FollowSymLinks
 RewriteEngine on
-RewriteRule profil/(.*)/(.*)/$ /profil.php?$1=$2
+RewriteRule    ^profil/([0-9]+)/?$    profil.php?id=$1    [NC,L]    # Handle product requests
+
+RewriteRule ^(.*)\.lol $1\.php 
+
